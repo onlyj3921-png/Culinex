@@ -1,0 +1,3995 @@
+{
+ "source": "AutoFood_Profit_Calculator_V1.2.xlsx scenarios recalculated in LibreOffice during V1.2 QA",
+ "count": 42,
+ "vectors": [
+  {
+   "id": "t1",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": 3,
+    "own": null,
+    "rows": [
+     {
+      "name": "Ground chicken",
+      "price": 8,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 1500,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger buns",
+      "price": 4,
+      "size": 12,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Cheese slices",
+      "price": 5,
+      "size": 20,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Lettuce",
+      "price": 2,
+      "size": 500,
+      "packUnit": "g",
+      "used": 250,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Tomatoes",
+      "price": 3,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 400,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger sauce",
+      "price": 6,
+      "size": 1000,
+      "packUnit": "ml",
+      "used": 200,
+      "usedUnit": "ml"
+     }
+    ]
+   },
+   "expected": {
+    "E6": 2.42333333333333,
+    "E7": 6.92380952380952,
+    "E8": 4.50047619047619,
+    "E9": 0.65,
+    "E10": 45.0047619047619,
+    "E11": 6.92380952380952,
+    "E12": 21.2333333333333,
+    "E13": 24.2333333333333,
+    "statusCode": "ok",
+    "rowText": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "rowCost": [
+     12,
+     3.33333333333333,
+     2.5,
+     1,
+     1.2,
+     1.2
+    ]
+   }
+  },
+  {
+   "id": "t2a",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": 3,
+    "own": null,
+    "rows": [
+     {
+      "name": "Ground chicken",
+      "price": 8,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 1500,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger buns",
+      "price": 4,
+      "size": 12,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Lettuce",
+      "price": 2,
+      "size": 500,
+      "packUnit": "g",
+      "used": 250,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Tomatoes",
+      "price": 3,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 400,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger sauce",
+      "price": 6,
+      "size": 1000,
+      "packUnit": "ml",
+      "used": 200,
+      "usedUnit": "ml"
+     }
+    ]
+   },
+   "expected": {
+    "E6": 2.17333333333333,
+    "E7": 6.20952380952381,
+    "E8": 4.03619047619048,
+    "E9": 0.65,
+    "E10": 40.3619047619048,
+    "E11": 6.20952380952381,
+    "E12": 18.7333333333333,
+    "E13": 21.7333333333333,
+    "statusCode": "ok",
+    "rowText": [
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "rowCost": [
+     12,
+     3.33333333333333,
+     1,
+     1.2,
+     1.2
+    ]
+   }
+  },
+  {
+   "id": "t2b",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": 3,
+    "own": null,
+    "rows": []
+   },
+   "expected": {
+    "E6": 0.3,
+    "E7": 0.857142857142857,
+    "E8": 0.557142857142857,
+    "E9": 0.65,
+    "E10": 5.57142857142857,
+    "E11": 0.857142857142857,
+    "E12": 0,
+    "E13": 3,
+    "statusCode": "ok",
+    "rowText": [],
+    "rowCost": []
+   }
+  },
+  {
+   "id": "t3",
+   "input": {
+    "servings": 0,
+    "margin": 0.65,
+    "other": 3,
+    "own": null,
+    "rows": [
+     {
+      "name": "Ground chicken",
+      "price": 8,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 1500,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger buns",
+      "price": 4,
+      "size": 12,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Cheese slices",
+      "price": 5,
+      "size": 20,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Lettuce",
+      "price": 2,
+      "size": 500,
+      "packUnit": "g",
+      "used": 250,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Tomatoes",
+      "price": 3,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 400,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger sauce",
+      "price": 6,
+      "size": 1000,
+      "packUnit": "ml",
+      "used": 200,
+      "usedUnit": "ml"
+     }
+    ]
+   },
+   "expected": {
+    "E6": "Enter servings",
+    "E7": "Check inputs",
+    "E8": null,
+    "E9": null,
+    "E10": null,
+    "E11": "Check inputs",
+    "E12": 21.2333333333333,
+    "E13": 24.2333333333333,
+    "statusCode": "noServings",
+    "rowText": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "rowCost": [
+     12,
+     3.33333333333333,
+     2.5,
+     1,
+     1.2,
+     1.2
+    ]
+   }
+  },
+  {
+   "id": "t4",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": 3,
+    "own": null,
+    "rows": [
+     {
+      "name": "Ground chicken",
+      "price": -8,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 1500,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger buns",
+      "price": 4,
+      "size": 12,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Cheese slices",
+      "price": 5,
+      "size": 20,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Lettuce",
+      "price": 2,
+      "size": 500,
+      "packUnit": "g",
+      "used": 250,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Tomatoes",
+      "price": 3,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 400,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger sauce",
+      "price": 6,
+      "size": 1000,
+      "packUnit": "ml",
+      "used": 200,
+      "usedUnit": "ml"
+     }
+    ]
+   },
+   "expected": {
+    "E6": "Fix inputs",
+    "E7": "Check inputs",
+    "E8": null,
+    "E9": null,
+    "E10": null,
+    "E11": "Check inputs",
+    "E12": "Fix inputs",
+    "E13": "Fix inputs",
+    "statusCode": "negative",
+    "rowText": [
+     "Check numbers",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "rowCost": [
+     null,
+     3.33333333333333,
+     2.5,
+     1,
+     1.2,
+     1.2
+    ]
+   }
+  },
+  {
+   "id": "t5",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": 3,
+    "own": null,
+    "rows": [
+     {
+      "name": "Ground chicken",
+      "price": 8,
+      "size": 0,
+      "packUnit": "g",
+      "used": 1500,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger buns",
+      "price": 4,
+      "size": 12,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Cheese slices",
+      "price": 5,
+      "size": 20,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Lettuce",
+      "price": 2,
+      "size": 500,
+      "packUnit": "g",
+      "used": 250,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Tomatoes",
+      "price": 3,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 400,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger sauce",
+      "price": 6,
+      "size": 1000,
+      "packUnit": "ml",
+      "used": 200,
+      "usedUnit": "ml"
+     }
+    ]
+   },
+   "expected": {
+    "E6": "Fix inputs",
+    "E7": "Check inputs",
+    "E8": null,
+    "E9": null,
+    "E10": null,
+    "E11": "Check inputs",
+    "E12": "Fix inputs",
+    "E13": "Fix inputs",
+    "statusCode": "invalidRow",
+    "rowText": [
+     "Check numbers",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "rowCost": [
+     null,
+     3.33333333333333,
+     2.5,
+     1,
+     1.2,
+     1.2
+    ]
+   }
+  },
+  {
+   "id": "t6",
+   "input": {
+    "servings": 10,
+    "margin": 1,
+    "other": 3,
+    "own": null,
+    "rows": [
+     {
+      "name": "Ground chicken",
+      "price": 8,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 1500,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger buns",
+      "price": 4,
+      "size": 12,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Cheese slices",
+      "price": 5,
+      "size": 20,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Lettuce",
+      "price": 2,
+      "size": 500,
+      "packUnit": "g",
+      "used": 250,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Tomatoes",
+      "price": 3,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 400,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger sauce",
+      "price": 6,
+      "size": 1000,
+      "packUnit": "ml",
+      "used": 200,
+      "usedUnit": "ml"
+     }
+    ]
+   },
+   "expected": {
+    "E6": 2.42333333333333,
+    "E7": "Check inputs",
+    "E8": null,
+    "E9": null,
+    "E10": null,
+    "E11": "Check inputs",
+    "E12": 21.2333333333333,
+    "E13": 24.2333333333333,
+    "statusCode": "badMargin",
+    "rowText": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "rowCost": [
+     12,
+     3.33333333333333,
+     2.5,
+     1,
+     1.2,
+     1.2
+    ]
+   }
+  },
+  {
+   "id": "t7",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": 3,
+    "own": 5,
+    "rows": [
+     {
+      "name": "Ground chicken",
+      "price": 8,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 1500,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger buns",
+      "price": 4,
+      "size": 12,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Cheese slices",
+      "price": 5,
+      "size": 20,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Lettuce",
+      "price": 2,
+      "size": 500,
+      "packUnit": "g",
+      "used": 250,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Tomatoes",
+      "price": 3,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 400,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger sauce",
+      "price": 6,
+      "size": 1000,
+      "packUnit": "ml",
+      "used": 200,
+      "usedUnit": "ml"
+     }
+    ]
+   },
+   "expected": {
+    "E6": 2.42333333333333,
+    "E7": 6.92380952380952,
+    "E8": 2.57666666666667,
+    "E9": 0.515333333333333,
+    "E10": 25.7666666666667,
+    "E11": 5,
+    "E12": 21.2333333333333,
+    "E13": 24.2333333333333,
+    "statusCode": "ok",
+    "rowText": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "rowCost": [
+     12,
+     3.33333333333333,
+     2.5,
+     1,
+     1.2,
+     1.2
+    ]
+   }
+  },
+  {
+   "id": "t8",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": 3,
+    "own": null,
+    "rows": [
+     {
+      "name": "Ground chicken",
+      "price": 8,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 1500,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger buns",
+      "price": 4,
+      "size": 12,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Cheese slices",
+      "price": 5,
+      "size": 20,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Lettuce",
+      "price": 2,
+      "size": 500,
+      "packUnit": "g",
+      "used": 250,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Tomatoes",
+      "price": 3,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 400,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger sauce",
+      "price": 6,
+      "size": 1000,
+      "packUnit": "ml",
+      "used": 200,
+      "usedUnit": "ml"
+     }
+    ]
+   },
+   "expected": {
+    "E6": 2.42333333333333,
+    "E7": 6.92380952380952,
+    "E8": 4.50047619047619,
+    "E9": 0.65,
+    "E10": 45.0047619047619,
+    "E11": 6.92380952380952,
+    "E12": 21.2333333333333,
+    "E13": 24.2333333333333,
+    "statusCode": "ok",
+    "rowText": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "rowCost": [
+     12,
+     3.33333333333333,
+     2.5,
+     1,
+     1.2,
+     1.2
+    ]
+   }
+  },
+  {
+   "id": "x1",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": 3,
+    "own": 2,
+    "rows": [
+     {
+      "name": "Ground chicken",
+      "price": 8,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 1500,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger buns",
+      "price": 4,
+      "size": 12,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Cheese slices",
+      "price": 5,
+      "size": 20,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Lettuce",
+      "price": 2,
+      "size": 500,
+      "packUnit": "g",
+      "used": 250,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Tomatoes",
+      "price": 3,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 400,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger sauce",
+      "price": 6,
+      "size": 1000,
+      "packUnit": "ml",
+      "used": 200,
+      "usedUnit": "ml"
+     }
+    ]
+   },
+   "expected": {
+    "E6": 2.42333333333333,
+    "E7": 6.92380952380952,
+    "E8": -0.423333333333333,
+    "E9": -0.211666666666667,
+    "E10": -4.23333333333333,
+    "E11": 2,
+    "E12": 21.2333333333333,
+    "E13": 24.2333333333333,
+    "statusCode": "ok",
+    "rowText": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "rowCost": [
+     12,
+     3.33333333333333,
+     2.5,
+     1,
+     1.2,
+     1.2
+    ]
+   }
+  },
+  {
+   "id": "x2",
+   "input": {
+    "servings": 10,
+    "margin": 0,
+    "other": 3,
+    "own": null,
+    "rows": [
+     {
+      "name": "Ground chicken",
+      "price": 8,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 1500,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger buns",
+      "price": 4,
+      "size": 12,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Cheese slices",
+      "price": 5,
+      "size": 20,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Lettuce",
+      "price": 2,
+      "size": 500,
+      "packUnit": "g",
+      "used": 250,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Tomatoes",
+      "price": 3,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 400,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger sauce",
+      "price": 6,
+      "size": 1000,
+      "packUnit": "ml",
+      "used": 200,
+      "usedUnit": "ml"
+     }
+    ]
+   },
+   "expected": {
+    "E6": 2.42333333333333,
+    "E7": 2.42333333333333,
+    "E8": 0,
+    "E9": 0,
+    "E10": 0,
+    "E11": 2.42333333333333,
+    "E12": 21.2333333333333,
+    "E13": 24.2333333333333,
+    "statusCode": "ok",
+    "rowText": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "rowCost": [
+     12,
+     3.33333333333333,
+     2.5,
+     1,
+     1.2,
+     1.2
+    ]
+   }
+  },
+  {
+   "id": "x3",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": 3,
+    "own": null,
+    "rows": [
+     {
+      "name": "Ground chicken",
+      "price": 8,
+      "size": 1000,
+      "packUnit": "g",
+      "used": -5,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger buns",
+      "price": 4,
+      "size": 12,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Cheese slices",
+      "price": 5,
+      "size": 20,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Lettuce",
+      "price": 2,
+      "size": 500,
+      "packUnit": "g",
+      "used": 250,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Tomatoes",
+      "price": 3,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 400,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger sauce",
+      "price": 6,
+      "size": 1000,
+      "packUnit": "ml",
+      "used": 200,
+      "usedUnit": "ml"
+     }
+    ]
+   },
+   "expected": {
+    "E6": "Fix inputs",
+    "E7": "Check inputs",
+    "E8": null,
+    "E9": null,
+    "E10": null,
+    "E11": "Check inputs",
+    "E12": "Fix inputs",
+    "E13": "Fix inputs",
+    "statusCode": "negative",
+    "rowText": [
+     "Check numbers",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "rowCost": [
+     null,
+     3.33333333333333,
+     2.5,
+     1,
+     1.2,
+     1.2
+    ]
+   }
+  },
+  {
+   "id": "x4",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": 3,
+    "own": null,
+    "rows": [
+     {
+      "name": "Ground chicken",
+      "price": 8,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 1500,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger buns",
+      "price": 4,
+      "size": 12,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Cheese slices",
+      "price": 5,
+      "size": 20,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Lettuce",
+      "price": 2,
+      "size": 500,
+      "packUnit": "g",
+      "used": 250,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Tomatoes",
+      "price": 3,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 400,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger sauce",
+      "price": 6,
+      "size": 1000,
+      "packUnit": "ml",
+      "used": 200,
+      "usedUnit": "ml"
+     },
+     {
+      "name": "Salt",
+      "price": 2,
+      "size": null,
+      "packUnit": null,
+      "used": 5,
+      "usedUnit": null
+     }
+    ]
+   },
+   "expected": {
+    "E6": "Fix inputs",
+    "E7": "Check inputs",
+    "E8": null,
+    "E9": null,
+    "E10": null,
+    "E11": "Check inputs",
+    "E12": "Fix inputs",
+    "E13": "Fix inputs",
+    "statusCode": "incomplete",
+    "rowText": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Incomplete"
+    ],
+    "rowCost": [
+     12,
+     3.33333333333333,
+     2.5,
+     1,
+     1.2,
+     1.2,
+     null
+    ]
+   }
+  },
+  {
+   "id": "x5",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": 3,
+    "own": 0,
+    "rows": [
+     {
+      "name": "Ground chicken",
+      "price": 8,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 1500,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger buns",
+      "price": 4,
+      "size": 12,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Cheese slices",
+      "price": 5,
+      "size": 20,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Lettuce",
+      "price": 2,
+      "size": 500,
+      "packUnit": "g",
+      "used": 250,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Tomatoes",
+      "price": 3,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 400,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger sauce",
+      "price": 6,
+      "size": 1000,
+      "packUnit": "ml",
+      "used": 200,
+      "usedUnit": "ml"
+     }
+    ]
+   },
+   "expected": {
+    "E6": 2.42333333333333,
+    "E7": 6.92380952380952,
+    "E8": -2.42333333333333,
+    "E9": null,
+    "E10": -24.2333333333333,
+    "E11": 0,
+    "E12": 21.2333333333333,
+    "E13": 24.2333333333333,
+    "statusCode": "badOwnPrice",
+    "rowText": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "rowCost": [
+     12,
+     3.33333333333333,
+     2.5,
+     1,
+     1.2,
+     1.2
+    ]
+   }
+  },
+  {
+   "id": "x6",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": null,
+    "own": null,
+    "rows": [
+     {
+      "name": "Ground chicken",
+      "price": 8,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 1500,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger buns",
+      "price": 4,
+      "size": 12,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Cheese slices",
+      "price": 5,
+      "size": 20,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Lettuce",
+      "price": 2,
+      "size": 500,
+      "packUnit": "g",
+      "used": 250,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Tomatoes",
+      "price": 3,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 400,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger sauce",
+      "price": 6,
+      "size": 1000,
+      "packUnit": "ml",
+      "used": 200,
+      "usedUnit": "ml"
+     }
+    ]
+   },
+   "expected": {
+    "E6": 2.12333333333333,
+    "E7": 6.06666666666667,
+    "E8": 3.94333333333333,
+    "E9": 0.65,
+    "E10": 39.4333333333333,
+    "E11": 6.06666666666667,
+    "E12": 21.2333333333333,
+    "E13": 21.2333333333333,
+    "statusCode": "ok",
+    "rowText": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "rowCost": [
+     12,
+     3.33333333333333,
+     2.5,
+     1,
+     1.2,
+     1.2
+    ]
+   }
+  },
+  {
+   "id": "x8",
+   "input": {
+    "servings": 7,
+    "margin": 0.55,
+    "other": 12.5,
+    "own": 9.9,
+    "rows": [
+     {
+      "name": "Ground chicken",
+      "price": 8,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 1500,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger buns",
+      "price": 4,
+      "size": 12,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Cheese slices",
+      "price": 5,
+      "size": 20,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Lettuce",
+      "price": 2,
+      "size": 500,
+      "packUnit": "g",
+      "used": 250,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Tomatoes",
+      "price": 3,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 400,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger sauce",
+      "price": 6,
+      "size": 1000,
+      "packUnit": "ml",
+      "used": 200,
+      "usedUnit": "ml"
+     },
+     {
+      "name": "Salt",
+      "price": 1.5,
+      "size": 500,
+      "packUnit": "g",
+      "used": 10,
+      "usedUnit": "g"
+     }
+    ]
+   },
+   "expected": {
+    "E6": 4.82333333333333,
+    "E7": 10.7185185185185,
+    "E8": 5.07666666666667,
+    "E9": 0.512794612794613,
+    "E10": 35.5366666666667,
+    "E11": 9.9,
+    "E12": 21.2633333333333,
+    "E13": 33.7633333333333,
+    "statusCode": "ok",
+    "rowText": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "rowCost": [
+     12,
+     3.33333333333333,
+     2.5,
+     1,
+     1.2,
+     1.2,
+     0.03
+    ]
+   }
+  },
+  {
+   "id": "b1",
+   "input": {
+    "servings": null,
+    "margin": 0.65,
+    "other": 3,
+    "own": 5,
+    "rows": [
+     {
+      "name": "Ground chicken",
+      "price": 8,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 1500,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger buns",
+      "price": 4,
+      "size": 12,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Cheese slices",
+      "price": 5,
+      "size": 20,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Lettuce",
+      "price": 2,
+      "size": 500,
+      "packUnit": "g",
+      "used": 250,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Tomatoes",
+      "price": 3,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 400,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger sauce",
+      "price": 6,
+      "size": 1000,
+      "packUnit": "ml",
+      "used": 200,
+      "usedUnit": "ml"
+     }
+    ]
+   },
+   "expected": {
+    "E6": "Enter servings",
+    "E7": "Check inputs",
+    "E8": null,
+    "E9": null,
+    "E10": null,
+    "E11": 5,
+    "E12": 21.2333333333333,
+    "E13": 24.2333333333333,
+    "statusCode": "noServings",
+    "rowText": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "rowCost": [
+     12,
+     3.33333333333333,
+     2.5,
+     1,
+     1.2,
+     1.2
+    ]
+   }
+  },
+  {
+   "id": "b2",
+   "input": {
+    "servings": 0,
+    "margin": 0.65,
+    "other": 3,
+    "own": 5,
+    "rows": [
+     {
+      "name": "Ground chicken",
+      "price": 8,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 1500,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger buns",
+      "price": 4,
+      "size": 12,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Cheese slices",
+      "price": 5,
+      "size": 20,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Lettuce",
+      "price": 2,
+      "size": 500,
+      "packUnit": "g",
+      "used": 250,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Tomatoes",
+      "price": 3,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 400,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger sauce",
+      "price": 6,
+      "size": 1000,
+      "packUnit": "ml",
+      "used": 200,
+      "usedUnit": "ml"
+     }
+    ]
+   },
+   "expected": {
+    "E6": "Enter servings",
+    "E7": "Check inputs",
+    "E8": null,
+    "E9": null,
+    "E10": null,
+    "E11": 5,
+    "E12": 21.2333333333333,
+    "E13": 24.2333333333333,
+    "statusCode": "noServings",
+    "rowText": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "rowCost": [
+     12,
+     3.33333333333333,
+     2.5,
+     1,
+     1.2,
+     1.2
+    ]
+   }
+  },
+  {
+   "id": "c1",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": 3,
+    "own": null,
+    "rows": [
+     {
+      "name": "Chicken",
+      "price": 8,
+      "size": 1,
+      "packUnit": "kg",
+      "used": 1500,
+      "usedUnit": "g"
+     }
+    ]
+   },
+   "expected": {
+    "E6": 1.5,
+    "E7": 4.28571428571429,
+    "E8": 2.78571428571429,
+    "E9": 0.65,
+    "E10": 27.8571428571429,
+    "E11": 4.28571428571429,
+    "E12": 12,
+    "E13": 15,
+    "statusCode": "ok",
+    "rowText": [
+     ""
+    ],
+    "rowCost": [
+     12
+    ]
+   }
+  },
+  {
+   "id": "c2",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": 3,
+    "own": null,
+    "rows": [
+     {
+      "name": "Flour",
+      "price": 4,
+      "size": 500,
+      "packUnit": "g",
+      "used": 1.5,
+      "usedUnit": "kg"
+     }
+    ]
+   },
+   "expected": {
+    "E6": 1.5,
+    "E7": 4.28571428571429,
+    "E8": 2.78571428571429,
+    "E9": 0.65,
+    "E10": 27.8571428571429,
+    "E11": 4.28571428571429,
+    "E12": 12,
+    "E13": 15,
+    "statusCode": "ok",
+    "rowText": [
+     ""
+    ],
+    "rowCost": [
+     12
+    ]
+   }
+  },
+  {
+   "id": "c3",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": 3,
+    "own": null,
+    "rows": [
+     {
+      "name": "Oil",
+      "price": 9,
+      "size": 2,
+      "packUnit": "L",
+      "used": 250,
+      "usedUnit": "ml"
+     }
+    ]
+   },
+   "expected": {
+    "E6": 0.4125,
+    "E7": 1.17857142857143,
+    "E8": 0.766071428571429,
+    "E9": 0.65,
+    "E10": 7.66071428571429,
+    "E11": 1.17857142857143,
+    "E12": 1.125,
+    "E13": 4.125,
+    "statusCode": "ok",
+    "rowText": [
+     ""
+    ],
+    "rowCost": [
+     1.125
+    ]
+   }
+  },
+  {
+   "id": "c4",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": 3,
+    "own": null,
+    "rows": [
+     {
+      "name": "Milk",
+      "price": 6,
+      "size": 750,
+      "packUnit": "ml",
+      "used": 0.3,
+      "usedUnit": "L"
+     }
+    ]
+   },
+   "expected": {
+    "E6": 0.54,
+    "E7": 1.54285714285714,
+    "E8": 1.00285714285714,
+    "E9": 0.65,
+    "E10": 10.0285714285714,
+    "E11": 1.54285714285714,
+    "E12": 2.4,
+    "E13": 5.4,
+    "statusCode": "ok",
+    "rowText": [
+     ""
+    ],
+    "rowCost": [
+     2.4
+    ]
+   }
+  },
+  {
+   "id": "c5",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": 3,
+    "own": null,
+    "rows": [
+     {
+      "name": "Eggs",
+      "price": 12,
+      "size": 30,
+      "packUnit": "pcs",
+      "used": 6,
+      "usedUnit": "pcs"
+     }
+    ]
+   },
+   "expected": {
+    "E6": 0.54,
+    "E7": 1.54285714285714,
+    "E8": 1.00285714285714,
+    "E9": 0.65,
+    "E10": 10.0285714285714,
+    "E11": 1.54285714285714,
+    "E12": 2.4,
+    "E13": 5.4,
+    "statusCode": "ok",
+    "rowText": [
+     ""
+    ],
+    "rowCost": [
+     2.4
+    ]
+   }
+  },
+  {
+   "id": "c6",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": 3,
+    "own": null,
+    "rows": [
+     {
+      "name": "Rice",
+      "price": 3.5,
+      "size": 1,
+      "packUnit": "KG",
+      "used": 250,
+      "usedUnit": "G"
+     }
+    ]
+   },
+   "expected": {
+    "E6": 0.3875,
+    "E7": 1.10714285714286,
+    "E8": 0.719642857142857,
+    "E9": 0.65,
+    "E10": 7.19642857142857,
+    "E11": 1.10714285714286,
+    "E12": 0.875,
+    "E13": 3.875,
+    "statusCode": "ok",
+    "rowText": [
+     ""
+    ],
+    "rowCost": [
+     0.875
+    ]
+   }
+  },
+  {
+   "id": "c7",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": 3,
+    "own": null,
+    "rows": [
+     {
+      "name": "Sugar",
+      "price": 2.5,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 0.2,
+      "usedUnit": "kg"
+     },
+     {
+      "name": "Stock",
+      "price": 3,
+      "size": 1,
+      "packUnit": "l",
+      "used": 500,
+      "usedUnit": "ML"
+     }
+    ]
+   },
+   "expected": {
+    "E6": 0.5,
+    "E7": 1.42857142857143,
+    "E8": 0.928571428571429,
+    "E9": 0.65,
+    "E10": 9.28571428571429,
+    "E11": 1.42857142857143,
+    "E12": 2,
+    "E13": 5,
+    "statusCode": "ok",
+    "rowText": [
+     "",
+     ""
+    ],
+    "rowCost": [
+     0.5,
+     1.5
+    ]
+   }
+  },
+  {
+   "id": "m1",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": 3,
+    "own": null,
+    "rows": [
+     {
+      "name": "Chicken",
+      "price": 8,
+      "size": 1,
+      "packUnit": "kg",
+      "used": 500,
+      "usedUnit": "ml"
+     }
+    ]
+   },
+   "expected": {
+    "E6": "Fix inputs",
+    "E7": "Check inputs",
+    "E8": null,
+    "E9": null,
+    "E10": null,
+    "E11": "Check inputs",
+    "E12": "Fix inputs",
+    "E13": "Fix inputs",
+    "statusCode": "unitMismatch",
+    "rowText": [
+     "Unit mismatch"
+    ],
+    "rowCost": [
+     null
+    ]
+   }
+  },
+  {
+   "id": "m2",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": 3,
+    "own": null,
+    "rows": [
+     {
+      "name": "Buns",
+      "price": 4,
+      "size": 12,
+      "packUnit": "pcs",
+      "used": 100,
+      "usedUnit": "g"
+     }
+    ]
+   },
+   "expected": {
+    "E6": "Fix inputs",
+    "E7": "Check inputs",
+    "E8": null,
+    "E9": null,
+    "E10": null,
+    "E11": "Check inputs",
+    "E12": "Fix inputs",
+    "E13": "Fix inputs",
+    "statusCode": "unitMismatch",
+    "rowText": [
+     "Unit mismatch"
+    ],
+    "rowCost": [
+     null
+    ]
+   }
+  },
+  {
+   "id": "m3",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": 3,
+    "own": null,
+    "rows": [
+     {
+      "name": "Oil",
+      "price": 9,
+      "size": 1,
+      "packUnit": "L",
+      "used": 100,
+      "usedUnit": "g"
+     }
+    ]
+   },
+   "expected": {
+    "E6": "Fix inputs",
+    "E7": "Check inputs",
+    "E8": null,
+    "E9": null,
+    "E10": null,
+    "E11": "Check inputs",
+    "E12": "Fix inputs",
+    "E13": "Fix inputs",
+    "statusCode": "unitMismatch",
+    "rowText": [
+     "Unit mismatch"
+    ],
+    "rowCost": [
+     null
+    ]
+   }
+  },
+  {
+   "id": "m4",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": 3,
+    "own": null,
+    "rows": [
+     {
+      "name": "Cheese",
+      "price": 5,
+      "size": 20,
+      "packUnit": "slice",
+      "used": 10,
+      "usedUnit": "slice"
+     }
+    ]
+   },
+   "expected": {
+    "E6": "Fix inputs",
+    "E7": "Check inputs",
+    "E8": null,
+    "E9": null,
+    "E10": null,
+    "E11": "Check inputs",
+    "E12": "Fix inputs",
+    "E13": "Fix inputs",
+    "statusCode": "checkUnit",
+    "rowText": [
+     "Check unit"
+    ],
+    "rowCost": [
+     null
+    ]
+   }
+  },
+  {
+   "id": "m5",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": 3,
+    "own": 5,
+    "rows": [
+     {
+      "name": "Chicken",
+      "price": 8,
+      "size": 1,
+      "packUnit": "kg",
+      "used": 500,
+      "usedUnit": "ml"
+     }
+    ]
+   },
+   "expected": {
+    "E6": "Fix inputs",
+    "E7": "Check inputs",
+    "E8": null,
+    "E9": null,
+    "E10": null,
+    "E11": 5,
+    "E12": "Fix inputs",
+    "E13": "Fix inputs",
+    "statusCode": "unitMismatch",
+    "rowText": [
+     "Unit mismatch"
+    ],
+    "rowCost": [
+     null
+    ]
+   }
+  },
+  {
+   "id": "m6",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": 3,
+    "own": null,
+    "rows": [
+     {
+      "name": "Ground chicken",
+      "price": 8,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 1500,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger buns",
+      "price": 4,
+      "size": 12,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Cheese slices",
+      "price": 5,
+      "size": 20,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Lettuce",
+      "price": 2,
+      "size": 500,
+      "packUnit": "g",
+      "used": 250,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Tomatoes",
+      "price": 3,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 400,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger sauce",
+      "price": 6,
+      "size": 1000,
+      "packUnit": "ml",
+      "used": 200,
+      "usedUnit": "ml"
+     },
+     {
+      "name": "Oil",
+      "price": 9,
+      "size": 1,
+      "packUnit": "L",
+      "used": 100,
+      "usedUnit": "g"
+     }
+    ]
+   },
+   "expected": {
+    "E6": "Fix inputs",
+    "E7": "Check inputs",
+    "E8": null,
+    "E9": null,
+    "E10": null,
+    "E11": "Check inputs",
+    "E12": "Fix inputs",
+    "E13": "Fix inputs",
+    "statusCode": "unitMismatch",
+    "rowText": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "Unit mismatch"
+    ],
+    "rowCost": [
+     12,
+     3.33333333333333,
+     2.5,
+     1,
+     1.2,
+     1.2,
+     null
+    ]
+   }
+  },
+  {
+   "id": "h1",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": 0,
+    "own": null,
+    "rows": [
+     {
+      "name": "Ground chicken",
+      "price": 8,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 1500,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger buns",
+      "price": 4,
+      "size": 12,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Cheese slices",
+      "price": 5,
+      "size": 20,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Lettuce",
+      "price": 2,
+      "size": 500,
+      "packUnit": "g",
+      "used": 250,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Tomatoes",
+      "price": 3,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 400,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger sauce",
+      "price": 6,
+      "size": 1000,
+      "packUnit": "ml",
+      "used": 200,
+      "usedUnit": "ml"
+     }
+    ]
+   },
+   "expected": {
+    "E6": 2.12333333333333,
+    "E7": 6.06666666666667,
+    "E8": 3.94333333333333,
+    "E9": 0.65,
+    "E10": 39.4333333333333,
+    "E11": 6.06666666666667,
+    "E12": 21.2333333333333,
+    "E13": 21.2333333333333,
+    "statusCode": "ok",
+    "rowText": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "rowCost": [
+     12,
+     3.33333333333333,
+     2.5,
+     1,
+     1.2,
+     1.2
+    ]
+   }
+  },
+  {
+   "id": "h2",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": null,
+    "own": null,
+    "rows": [
+     {
+      "name": "Ground chicken",
+      "price": 8,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 1500,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger buns",
+      "price": 4,
+      "size": 12,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Cheese slices",
+      "price": 5,
+      "size": 20,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Lettuce",
+      "price": 2,
+      "size": 500,
+      "packUnit": "g",
+      "used": 250,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Tomatoes",
+      "price": 3,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 400,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger sauce",
+      "price": 6,
+      "size": 1000,
+      "packUnit": "ml",
+      "used": 200,
+      "usedUnit": "ml"
+     }
+    ]
+   },
+   "expected": {
+    "E6": 2.12333333333333,
+    "E7": 6.06666666666667,
+    "E8": 3.94333333333333,
+    "E9": 0.65,
+    "E10": 39.4333333333333,
+    "E11": 6.06666666666667,
+    "E12": 21.2333333333333,
+    "E13": 21.2333333333333,
+    "statusCode": "ok",
+    "rowText": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "rowCost": [
+     12,
+     3.33333333333333,
+     2.5,
+     1,
+     1.2,
+     1.2
+    ]
+   }
+  },
+  {
+   "id": "h3",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": 3,
+    "own": null,
+    "rows": [
+     {
+      "name": "Ground chicken",
+      "price": 8,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 1500,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger buns",
+      "price": 4,
+      "size": 12,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Cheese slices",
+      "price": 5,
+      "size": 20,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Lettuce",
+      "price": 2,
+      "size": 500,
+      "packUnit": "g",
+      "used": 250,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Tomatoes",
+      "price": 3,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 400,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger sauce",
+      "price": 6,
+      "size": 1000,
+      "packUnit": "ml",
+      "used": 200,
+      "usedUnit": "ml"
+     }
+    ]
+   },
+   "expected": {
+    "E6": 2.42333333333333,
+    "E7": 6.92380952380952,
+    "E8": 4.50047619047619,
+    "E9": 0.65,
+    "E10": 45.0047619047619,
+    "E11": 6.92380952380952,
+    "E12": 21.2333333333333,
+    "E13": 24.2333333333333,
+    "statusCode": "ok",
+    "rowText": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "rowCost": [
+     12,
+     3.33333333333333,
+     2.5,
+     1,
+     1.2,
+     1.2
+    ]
+   }
+  },
+  {
+   "id": "h4",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": 1234.5,
+    "own": null,
+    "rows": [
+     {
+      "name": "Ground chicken",
+      "price": 8,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 1500,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger buns",
+      "price": 4,
+      "size": 12,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Cheese slices",
+      "price": 5,
+      "size": 20,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Lettuce",
+      "price": 2,
+      "size": 500,
+      "packUnit": "g",
+      "used": 250,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Tomatoes",
+      "price": 3,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 400,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger sauce",
+      "price": 6,
+      "size": 1000,
+      "packUnit": "ml",
+      "used": 200,
+      "usedUnit": "ml"
+     }
+    ]
+   },
+   "expected": {
+    "E6": 125.573333333333,
+    "E7": 358.780952380952,
+    "E8": 233.207619047619,
+    "E9": 0.65,
+    "E10": 2332.07619047619,
+    "E11": 358.780952380952,
+    "E12": 21.2333333333333,
+    "E13": 1255.73333333333,
+    "statusCode": "ok",
+    "rowText": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "rowCost": [
+     12,
+     3.33333333333333,
+     2.5,
+     1,
+     1.2,
+     1.2
+    ]
+   }
+  },
+  {
+   "id": "r0",
+   "input": {
+    "servings": 24,
+    "margin": 0.22,
+    "other": 9.44,
+    "own": 29.27,
+    "rows": [
+     {
+      "name": "Item0",
+      "price": 27.77,
+      "size": 1500,
+      "packUnit": "L",
+      "used": 221.07,
+      "usedUnit": "ml"
+     },
+     {
+      "name": "Item1",
+      "price": 15.41,
+      "size": 20,
+      "packUnit": "kg",
+      "used": 724.64,
+      "usedUnit": "kg"
+     },
+     {
+      "name": "Item2",
+      "price": 38.21,
+      "size": 2,
+      "packUnit": "ml",
+      "used": 103.55,
+      "usedUnit": "ml"
+     },
+     {
+      "name": "Item3",
+      "price": 58.67,
+      "size": 500,
+      "packUnit": "ml",
+      "used": 1799.54,
+      "usedUnit": "ml"
+     },
+     {
+      "name": "Item4",
+      "price": 43.15,
+      "size": 750,
+      "packUnit": "L",
+      "used": 1372.96,
+      "usedUnit": "L"
+     },
+     {
+      "name": "Item5",
+      "price": 10.4,
+      "size": 250,
+      "packUnit": "pcs",
+      "used": 5,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item6",
+      "price": 49.78,
+      "size": 5,
+      "packUnit": "kg",
+      "used": 1208.41,
+      "usedUnit": "kg"
+     },
+     {
+      "name": "Item7",
+      "price": 57.28,
+      "size": 500,
+      "packUnit": "g",
+      "used": 760.27,
+      "usedUnit": "kg"
+     },
+     {
+      "name": "Item8",
+      "price": 29.88,
+      "size": 750,
+      "packUnit": "kg",
+      "used": 689.1,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Item9",
+      "price": 50.18,
+      "size": 12,
+      "packUnit": "ml",
+      "used": 692.24,
+      "usedUnit": "ml"
+     },
+     {
+      "name": "Item10",
+      "price": 35.3,
+      "size": 500,
+      "packUnit": "ml",
+      "used": 355.45,
+      "usedUnit": "ml"
+     },
+     {
+      "name": "Item11",
+      "price": 23.08,
+      "size": 20,
+      "packUnit": "pcs",
+      "used": 9,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item12",
+      "price": 21.31,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 1920.56,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Item13",
+      "price": 48.6,
+      "size": 5,
+      "packUnit": "pcs",
+      "used": 14,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item14",
+      "price": 40.16,
+      "size": 5,
+      "packUnit": "ml",
+      "used": 1707.37,
+      "usedUnit": "L"
+     },
+     {
+      "name": "Item15",
+      "price": 16.4,
+      "size": 500,
+      "packUnit": "pcs",
+      "used": 27,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item16",
+      "price": 16.69,
+      "size": 20,
+      "packUnit": "pcs",
+      "used": 26,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item17",
+      "price": 19.89,
+      "size": 1,
+      "packUnit": "pcs",
+      "used": 11,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item18",
+      "price": 31.54,
+      "size": 1,
+      "packUnit": "g",
+      "used": 1404.19,
+      "usedUnit": "kg"
+     },
+     {
+      "name": "Item19",
+      "price": 23.6,
+      "size": 20,
+      "packUnit": "pcs",
+      "used": 21,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item20",
+      "price": 36.74,
+      "size": 2,
+      "packUnit": "g",
+      "used": 1416.4,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Item21",
+      "price": 52.6,
+      "size": 1000,
+      "packUnit": "ml",
+      "used": 492.51,
+      "usedUnit": "ml"
+     },
+     {
+      "name": "Item22",
+      "price": 35.57,
+      "size": 250,
+      "packUnit": "L",
+      "used": 323.45,
+      "usedUnit": "L"
+     },
+     {
+      "name": "Item23",
+      "price": 22.95,
+      "size": 750,
+      "packUnit": "kg",
+      "used": 1835.7,
+      "usedUnit": "g"
+     }
+    ]
+   },
+   "expected": {
+    "E6": 2422215.70815278,
+    "E7": 3105404.75404203,
+    "E8": -2422186.43815278,
+    "E9": -82753.2093663404,
+    "E10": -58132474.5156668,
+    "E11": 29.27,
+    "E12": 58133167.5556668,
+    "E13": 58133176.9956668,
+    "statusCode": "ok",
+    "rowText": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "rowCost": [
+     0.0040927426,
+     558.33512,
+     1978.32275,
+     211.1580236,
+     78.9909653333333,
+     0.208,
+     12030.92996,
+     87096.5312,
+     0.027453744,
+     2894.71693333333,
+     25.09477,
+     10.386,
+     40.9271336,
+     136.08,
+     13713595.84,
+     0.8856,
+     21.697,
+     218.79,
+     44288152.6,
+     24.78,
+     26019.268,
+     25.906026,
+     46.020466,
+     0.05617242
+    ]
+   }
+  },
+  {
+   "id": "r1",
+   "input": {
+    "servings": 100,
+    "margin": 0.13,
+    "other": 38.58,
+    "own": null,
+    "rows": [
+     {
+      "name": "Item0",
+      "price": 34.87,
+      "size": 250,
+      "packUnit": "kg",
+      "used": 339.33,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Item1",
+      "price": 57.78,
+      "size": 250,
+      "packUnit": "g",
+      "used": 1781.72,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Item2",
+      "price": 47.4,
+      "size": 20,
+      "packUnit": "pcs",
+      "used": 2,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item3",
+      "price": 47.67,
+      "size": 1,
+      "packUnit": "ml",
+      "used": 1370.03,
+      "usedUnit": "L"
+     },
+     {
+      "name": "Item5",
+      "price": 12.18,
+      "size": 1000,
+      "packUnit": "kg",
+      "used": 788.49,
+      "usedUnit": "kg"
+     },
+     {
+      "name": "Item6",
+      "price": 49.25,
+      "size": 250,
+      "packUnit": "pcs",
+      "used": 21,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item7",
+      "price": 57.81,
+      "size": 1000,
+      "packUnit": "kg",
+      "used": 1257.95,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Item8",
+      "price": 39.98,
+      "size": 12,
+      "packUnit": "ml",
+      "used": 368.74,
+      "usedUnit": "L"
+     },
+     {
+      "name": "Item9",
+      "price": 47.55,
+      "size": 12,
+      "packUnit": "L",
+      "used": 1100.79,
+      "usedUnit": "L"
+     },
+     {
+      "name": "Item10",
+      "price": 17.25,
+      "size": 1500,
+      "packUnit": "pcs",
+      "used": 21,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item12",
+      "price": 29.73,
+      "size": 750,
+      "packUnit": "g",
+      "used": 1965.7,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Item13",
+      "price": 16.74,
+      "size": 1500,
+      "packUnit": "ml",
+      "used": 1379.66,
+      "usedUnit": "ml"
+     },
+     {
+      "name": "Item14",
+      "price": 34.41,
+      "size": 750,
+      "packUnit": "L",
+      "used": 1405.27,
+      "usedUnit": "ml"
+     },
+     {
+      "name": "Item15",
+      "price": 15.98,
+      "size": 250,
+      "packUnit": "ml",
+      "used": 1938.91,
+      "usedUnit": "ml"
+     },
+     {
+      "name": "Item16",
+      "price": 27.17,
+      "size": 5,
+      "packUnit": "g",
+      "used": 984.98,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Item17",
+      "price": 58,
+      "size": 750,
+      "packUnit": "kg",
+      "used": 1965.38,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Item18",
+      "price": 50.02,
+      "size": 1500,
+      "packUnit": "pcs",
+      "used": 25,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item19",
+      "price": 50.04,
+      "size": 1,
+      "packUnit": "L",
+      "used": 1631.09,
+      "usedUnit": "L"
+     },
+     {
+      "name": "Item20",
+      "price": 29.68,
+      "size": 2,
+      "packUnit": "pcs",
+      "used": 6,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item21",
+      "price": 52.81,
+      "size": 5,
+      "packUnit": "pcs",
+      "used": 20,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item22",
+      "price": 1.93,
+      "size": 2,
+      "packUnit": "L",
+      "used": 1445.65,
+      "usedUnit": "L"
+     },
+     {
+      "name": "Item23",
+      "price": 1.1,
+      "size": 500,
+      "packUnit": "pcs",
+      "used": 0,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item24",
+      "price": 29.6,
+      "size": 250,
+      "packUnit": "pcs",
+      "used": 27,
+      "usedUnit": "pcs"
+     }
+    ]
+   },
+   "expected": {
+    "E6": 666315.689171088,
+    "E7": 765880.102495503,
+    "E8": 99564.4133244153,
+    "E9": 0.13,
+    "E10": 9956441.33244153,
+    "E11": 765880.102495503,
+    "E12": 66631530.3371087,
+    "E13": 66631568.9171087,
+    "statusCode": "ok",
+    "rowText": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "rowCost": [
+     0.0473297484,
+     411.7911264,
+     4.74,
+     65309330.1,
+     9.6038082,
+     4.137,
+     0.0727220895,
+     1228518.76666667,
+     4361.880375,
+     0.2415,
+     77.920348,
+     15.3970056,
+     0.0644737876,
+     123.9351272,
+     5352.38132,
+     0.151989386666667,
+     0.833666666666667,
+     81619.7436,
+     89.04,
+     211.24,
+     1395.05225,
+     0,
+     3.1968
+    ]
+   }
+  },
+  {
+   "id": "r2",
+   "input": {
+    "servings": 1,
+    "margin": 0.29,
+    "other": 34.84,
+    "own": 17.08,
+    "rows": [
+     {
+      "name": "Item0",
+      "price": 32.65,
+      "size": 750,
+      "packUnit": "L",
+      "used": 679.73,
+      "usedUnit": "ml"
+     },
+     {
+      "name": "Item1",
+      "price": 58.79,
+      "size": 12,
+      "packUnit": "g",
+      "used": 769.96,
+      "usedUnit": "kg"
+     },
+     {
+      "name": "Item2",
+      "price": 56.31,
+      "size": 12,
+      "packUnit": "L",
+      "used": 1922.41,
+      "usedUnit": "L"
+     },
+     {
+      "name": "Item3",
+      "price": 23.51,
+      "size": 500,
+      "packUnit": "ml",
+      "used": 208.43,
+      "usedUnit": "L"
+     },
+     {
+      "name": "Item6",
+      "price": 43.82,
+      "size": 750,
+      "packUnit": "kg",
+      "used": 222.44,
+      "usedUnit": "kg"
+     },
+     {
+      "name": "Item7",
+      "price": 32.05,
+      "size": 5,
+      "packUnit": "ml",
+      "used": 569.47,
+      "usedUnit": "L"
+     },
+     {
+      "name": "Item8",
+      "price": 2.61,
+      "size": 5,
+      "packUnit": "g",
+      "used": 885.38,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Item9",
+      "price": 41.03,
+      "size": 1500,
+      "packUnit": "pcs",
+      "used": 0,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item10",
+      "price": 37.52,
+      "size": 1,
+      "packUnit": "L",
+      "used": 1876.72,
+      "usedUnit": "ml"
+     },
+     {
+      "name": "Item11",
+      "price": 23.23,
+      "size": 5,
+      "packUnit": "pcs",
+      "used": 28,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item12",
+      "price": 51.86,
+      "size": 250,
+      "packUnit": "pcs",
+      "used": 27,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item13",
+      "price": 45.21,
+      "size": 20,
+      "packUnit": "ml",
+      "used": 1618.71,
+      "usedUnit": "L"
+     },
+     {
+      "name": "Item14",
+      "price": 55.86,
+      "size": 1,
+      "packUnit": "pcs",
+      "used": 11,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item15",
+      "price": 20.6,
+      "size": 20,
+      "packUnit": "pcs",
+      "used": 5,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item16",
+      "price": 22.4,
+      "size": 500,
+      "packUnit": "pcs",
+      "used": 23,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item17",
+      "price": 37.75,
+      "size": 500,
+      "packUnit": "ml",
+      "used": 1693.75,
+      "usedUnit": "ml"
+     },
+     {
+      "name": "Item18",
+      "price": 27.39,
+      "size": 5,
+      "packUnit": "kg",
+      "used": 483.94,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Item19",
+      "price": 35.99,
+      "size": 500,
+      "packUnit": "pcs",
+      "used": 5,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item20",
+      "price": 26.67,
+      "size": 12,
+      "packUnit": "pcs",
+      "used": 2,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item21",
+      "price": 35.11,
+      "size": 1000,
+      "packUnit": "ml",
+      "used": 85.91,
+      "usedUnit": "ml"
+     },
+     {
+      "name": "Item22",
+      "price": 14.12,
+      "size": 250,
+      "packUnit": "kg",
+      "used": 1655.79,
+      "usedUnit": "kg"
+     },
+     {
+      "name": "Item23",
+      "price": 48.13,
+      "size": 250,
+      "packUnit": "kg",
+      "used": 1423.43,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Item24",
+      "price": 13.98,
+      "size": 20,
+      "packUnit": "ml",
+      "used": 667.22,
+      "usedUnit": "ml"
+     }
+    ]
+   },
+   "expected": {
+    "E6": 11102415.6175711,
+    "E7": 15637205.0951705,
+    "E8": -11102398.5375711,
+    "E9": -650023.333581445,
+    "E10": -11102398.5375711,
+    "E11": 17.08,
+    "E12": 11102380.7775711,
+    "E13": 11102415.6175711,
+    "statusCode": "ok",
+    "rowText": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "rowCost": [
+     0.0295909126666667,
+     3772162.36666667,
+     9020.908925,
+     9800.3786,
+     12.9964277333333,
+     3650302.7,
+     462.16836,
+     0,
+     70.4145344,
+     130.088,
+     5.60088,
+     3659093.955,
+     614.46,
+     5.15,
+     1.0304,
+     127.878125,
+     2.65102332,
+     0.3599,
+     4.445,
+     3.0163001,
+     93.5190192,
+     0.2740387436,
+     466.38678
+    ]
+   }
+  },
+  {
+   "id": "r3",
+   "input": {
+    "servings": 100,
+    "margin": 0.8,
+    "other": 1.09,
+    "own": 27.78,
+    "rows": [
+     {
+      "name": "Item0",
+      "price": 57.69,
+      "size": 5,
+      "packUnit": "g",
+      "used": 126.06,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Item1",
+      "price": 18.24,
+      "size": 12,
+      "packUnit": "kg",
+      "used": 11.19,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Item2",
+      "price": 0.55,
+      "size": 250,
+      "packUnit": "pcs",
+      "used": 14,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item4",
+      "price": 4.54,
+      "size": 1000,
+      "packUnit": "ml",
+      "used": 1467.77,
+      "usedUnit": "L"
+     },
+     {
+      "name": "Item5",
+      "price": 49.58,
+      "size": 500,
+      "packUnit": "pcs",
+      "used": 28,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item6",
+      "price": 41.17,
+      "size": 750,
+      "packUnit": "g",
+      "used": 706.64,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Item7",
+      "price": 16,
+      "size": 2,
+      "packUnit": "L",
+      "used": 1313.28,
+      "usedUnit": "ml"
+     },
+     {
+      "name": "Item8",
+      "price": 7.8,
+      "size": 1,
+      "packUnit": "pcs",
+      "used": 3,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item9",
+      "price": 50.02,
+      "size": 1500,
+      "packUnit": "kg",
+      "used": 1905.26,
+      "usedUnit": "kg"
+     },
+     {
+      "name": "Item10",
+      "price": 53.01,
+      "size": 750,
+      "packUnit": "ml",
+      "used": 727.68,
+      "usedUnit": "L"
+     },
+     {
+      "name": "Item11",
+      "price": 19.77,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 77.6,
+      "usedUnit": "kg"
+     },
+     {
+      "name": "Item13",
+      "price": 10.75,
+      "size": 1,
+      "packUnit": "pcs",
+      "used": 28,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item14",
+      "price": 25.13,
+      "size": 750,
+      "packUnit": "kg",
+      "used": 67.71,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Item15",
+      "price": 43.87,
+      "size": 1,
+      "packUnit": "L",
+      "used": 391.94,
+      "usedUnit": "L"
+     },
+     {
+      "name": "Item16",
+      "price": 46.47,
+      "size": 2,
+      "packUnit": "ml",
+      "used": 1851.65,
+      "usedUnit": "L"
+     },
+     {
+      "name": "Item17",
+      "price": 49.19,
+      "size": 1000,
+      "packUnit": "pcs",
+      "used": 20,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item18",
+      "price": 58.97,
+      "size": 1,
+      "packUnit": "pcs",
+      "used": 30,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item19",
+      "price": 37.61,
+      "size": 5,
+      "packUnit": "kg",
+      "used": 646.59,
+      "usedUnit": "kg"
+     },
+     {
+      "name": "Item21",
+      "price": 32.42,
+      "size": 500,
+      "packUnit": "ml",
+      "used": 876.11,
+      "usedUnit": "ml"
+     },
+     {
+      "name": "Item22",
+      "price": 5.08,
+      "size": 1500,
+      "packUnit": "pcs",
+      "used": 6,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item23",
+      "price": 20.58,
+      "size": 250,
+      "packUnit": "L",
+      "used": 91.43,
+      "usedUnit": "L"
+     },
+     {
+      "name": "Item24",
+      "price": 57.55,
+      "size": 1000,
+      "packUnit": "ml",
+      "used": 59.08,
+      "usedUnit": "ml"
+     }
+    ]
+   },
+   "expected": {
+    "E6": 431085.095226167,
+    "E7": 2155425.47613084,
+    "E8": -431057.315226167,
+    "E9": -15516.8220023818,
+    "E10": -43105731.5226167,
+    "E11": 27.78,
+    "E12": 43108508.4326167,
+    "E13": 43108509.5226167,
+    "statusCode": "ok",
+    "rowText": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "rowCost": [
+     1454.48028,
+     0.0170088,
+     0.0308,
+     6663.6758,
+     2.77648,
+     38.7898250666667,
+     10.50624,
+     23.4,
+     63.5340701333333,
+     51432.4224,
+     1534.152,
+     301,
+     0.0022687364,
+     17194.4078,
+     43023087.75,
+     0.9838,
+     1769.1,
+     4863.64998,
+     56.8069724,
+     0.02032,
+     7.5265176,
+     3.400054
+    ]
+   }
+  },
+  {
+   "id": "r4",
+   "input": {
+    "servings": 10,
+    "margin": 0.52,
+    "other": 12.5,
+    "own": null,
+    "rows": [
+     {
+      "name": "Item0",
+      "price": 45.77,
+      "size": 500,
+      "packUnit": "g",
+      "used": 842.27,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Item1",
+      "price": 59.42,
+      "size": 2,
+      "packUnit": "pcs",
+      "used": 5,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item2",
+      "price": 44.92,
+      "size": 1000,
+      "packUnit": "kg",
+      "used": 180.75,
+      "usedUnit": "kg"
+     },
+     {
+      "name": "Item3",
+      "price": 49.26,
+      "size": 5,
+      "packUnit": "pcs",
+      "used": 21,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item4",
+      "price": 3.25,
+      "size": 1,
+      "packUnit": "g",
+      "used": 1324.01,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Item5",
+      "price": 13.1,
+      "size": 2,
+      "packUnit": "ml",
+      "used": 1946.12,
+      "usedUnit": "L"
+     },
+     {
+      "name": "Item6",
+      "price": 34.65,
+      "size": 250,
+      "packUnit": "ml",
+      "used": 1120.64,
+      "usedUnit": "L"
+     },
+     {
+      "name": "Item7",
+      "price": 47.85,
+      "size": 2,
+      "packUnit": "pcs",
+      "used": 1,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item8",
+      "price": 20.82,
+      "size": 1,
+      "packUnit": "pcs",
+      "used": 2,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item9",
+      "price": 14.89,
+      "size": 20,
+      "packUnit": "kg",
+      "used": 1715.2,
+      "usedUnit": "kg"
+     },
+     {
+      "name": "Item11",
+      "price": 1.41,
+      "size": 2,
+      "packUnit": "g",
+      "used": 1467.93,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Item12",
+      "price": 50.8,
+      "size": 750,
+      "packUnit": "L",
+      "used": 1495.81,
+      "usedUnit": "L"
+     },
+     {
+      "name": "Item13",
+      "price": 7.54,
+      "size": 12,
+      "packUnit": "pcs",
+      "used": 25,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item14",
+      "price": 29.03,
+      "size": 500,
+      "packUnit": "pcs",
+      "used": 26,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item15",
+      "price": 26.49,
+      "size": 1500,
+      "packUnit": "ml",
+      "used": 1754.68,
+      "usedUnit": "ml"
+     },
+     {
+      "name": "Item16",
+      "price": 51.87,
+      "size": 20,
+      "packUnit": "kg",
+      "used": 769.21,
+      "usedUnit": "kg"
+     },
+     {
+      "name": "Item17",
+      "price": 30.75,
+      "size": 5,
+      "packUnit": "kg",
+      "used": 1792.26,
+      "usedUnit": "kg"
+     },
+     {
+      "name": "Item18",
+      "price": 13.91,
+      "size": 12,
+      "packUnit": "g",
+      "used": 1636.28,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Item19",
+      "price": 53.98,
+      "size": 20,
+      "packUnit": "kg",
+      "used": 376.16,
+      "usedUnit": "kg"
+     },
+     {
+      "name": "Item20",
+      "price": 55.07,
+      "size": 5,
+      "packUnit": "kg",
+      "used": 1539.54,
+      "usedUnit": "kg"
+     },
+     {
+      "name": "Item21",
+      "price": 45.07,
+      "size": 20,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item23",
+      "price": 42.82,
+      "size": 1,
+      "packUnit": "kg",
+      "used": 280.52,
+      "usedUnit": "kg"
+     }
+    ]
+   },
+   "expected": {
+    "E6": 1295461.00601436,
+    "E7": 2698877.09586325,
+    "E8": 1403416.08984889,
+    "E9": 0.52,
+    "E10": 14034160.8984889,
+    "E11": 2698877.09586325,
+    "E12": 12954597.5601436,
+    "E13": 12954610.0601436,
+    "statusCode": "ok",
+    "rowText": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "rowCost": [
+     77.1013958,
+     148.55,
+     8.11929,
+     206.892,
+     4303.0325,
+     12747086,
+     155320.704,
+     23.925,
+     41.64,
+     1276.9664,
+     1034.89065,
+     101.316197333333,
+     15.7083333333333,
+     1.50956,
+     30.9876488,
+     1994.946135,
+     11022.399,
+     1896.72123333333,
+     1015.25584,
+     16956.49356,
+     22.535,
+     12011.8664
+    ]
+   }
+  },
+  {
+   "id": "r5",
+   "input": {
+    "servings": 10,
+    "margin": 0.44,
+    "other": 5.76,
+    "own": 3.53,
+    "rows": [
+     {
+      "name": "Item0",
+      "price": 31.33,
+      "size": 20,
+      "packUnit": "ml",
+      "used": 1812.05,
+      "usedUnit": "ml"
+     },
+     {
+      "name": "Item1",
+      "price": 13.94,
+      "size": 5,
+      "packUnit": "ml",
+      "used": 526.92,
+      "usedUnit": "L"
+     },
+     {
+      "name": "Item2",
+      "price": 11.53,
+      "size": 1,
+      "packUnit": "kg",
+      "used": 480.11,
+      "usedUnit": "kg"
+     },
+     {
+      "name": "Item4",
+      "price": 2.55,
+      "size": 2,
+      "packUnit": "kg",
+      "used": 1860.3,
+      "usedUnit": "kg"
+     },
+     {
+      "name": "Item5",
+      "price": 47.9,
+      "size": 1000,
+      "packUnit": "ml",
+      "used": 874.28,
+      "usedUnit": "L"
+     },
+     {
+      "name": "Item6",
+      "price": 8.31,
+      "size": 250,
+      "packUnit": "pcs",
+      "used": 29,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item7",
+      "price": 32.56,
+      "size": 12,
+      "packUnit": "L",
+      "used": 707.83,
+      "usedUnit": "L"
+     },
+     {
+      "name": "Item8",
+      "price": 31.32,
+      "size": 750,
+      "packUnit": "ml",
+      "used": 796.75,
+      "usedUnit": "ml"
+     },
+     {
+      "name": "Item9",
+      "price": 8.5,
+      "size": 2,
+      "packUnit": "L",
+      "used": 216.84,
+      "usedUnit": "L"
+     },
+     {
+      "name": "Item11",
+      "price": 19.16,
+      "size": 1500,
+      "packUnit": "kg",
+      "used": 89.3,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Item12",
+      "price": 6.4,
+      "size": 1000,
+      "packUnit": "L",
+      "used": 153.19,
+      "usedUnit": "ml"
+     },
+     {
+      "name": "Item13",
+      "price": 48.48,
+      "size": 1500,
+      "packUnit": "L",
+      "used": 348.02,
+      "usedUnit": "L"
+     },
+     {
+      "name": "Item14",
+      "price": 40.62,
+      "size": 500,
+      "packUnit": "pcs",
+      "used": 28,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item15",
+      "price": 37.57,
+      "size": 1500,
+      "packUnit": "g",
+      "used": 594.93,
+      "usedUnit": "kg"
+     },
+     {
+      "name": "Item16",
+      "price": 3.5,
+      "size": 1500,
+      "packUnit": "kg",
+      "used": 715.71,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Item17",
+      "price": 50.18,
+      "size": 20,
+      "packUnit": "ml",
+      "used": 700.39,
+      "usedUnit": "L"
+     },
+     {
+      "name": "Item18",
+      "price": 54.24,
+      "size": 5,
+      "packUnit": "g",
+      "used": 288.15,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Item19",
+      "price": 10.42,
+      "size": 5,
+      "packUnit": "ml",
+      "used": 810.94,
+      "usedUnit": "ml"
+     },
+     {
+      "name": "Item20",
+      "price": 35.06,
+      "size": 750,
+      "packUnit": "pcs",
+      "used": 29,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Item21",
+      "price": 23.57,
+      "size": 12,
+      "packUnit": "L",
+      "used": 863.62,
+      "usedUnit": "ml"
+     },
+     {
+      "name": "Item22",
+      "price": 42.93,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 1598.84,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Item23",
+      "price": 7.98,
+      "size": 500,
+      "packUnit": "kg",
+      "used": 1755.93,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Item24",
+      "price": 19.33,
+      "size": 12,
+      "packUnit": "ml",
+      "used": 534.99,
+      "usedUnit": "L"
+     }
+    ]
+   },
+   "expected": {
+    "E6": 416341.958734859,
+    "E7": 743467.783455105,
+    "E8": -416338.428734859,
+    "E9": -117942.8976586,
+    "E10": -4163384.28734859,
+    "E11": 3.53,
+    "E12": 4163413.82734859,
+    "E13": 4163419.58734859,
+    "statusCode": "ok",
+    "rowText": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "rowCost": [
+     2838.576325,
+     1469052.96,
+     5535.6683,
+     2371.8825,
+     41878.012,
+     0.96396,
+     1920.57873333333,
+     33.27228,
+     921.57,
+     0.00114065866666667,
+     0.000980416,
+     11.2480064,
+     2.27472,
+     14901.0134,
+     0.00166999,
+     1757278.51,
+     3125.8512,
+     1689.99896,
+     1.35565333333333,
+     1.69629361666667,
+     68.6382012,
+     0.0280246428,
+     861779.725
+    ]
+   }
+  },
+  {
+   "id": "bt1_blank_template",
+   "input": {
+    "servings": 10,
+    "margin": 0.65,
+    "other": 3,
+    "own": null,
+    "rows": [
+     {
+      "name": "Ground chicken",
+      "price": 8,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 1500,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger buns",
+      "price": 4,
+      "size": 12,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Cheese slices",
+      "price": 5,
+      "size": 20,
+      "packUnit": "pcs",
+      "used": 10,
+      "usedUnit": "pcs"
+     },
+     {
+      "name": "Lettuce",
+      "price": 2,
+      "size": 500,
+      "packUnit": "g",
+      "used": 250,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Tomatoes",
+      "price": 3,
+      "size": 1000,
+      "packUnit": "g",
+      "used": 400,
+      "usedUnit": "g"
+     },
+     {
+      "name": "Burger sauce",
+      "price": 6,
+      "size": 1000,
+      "packUnit": "ml",
+      "used": 200,
+      "usedUnit": "ml"
+     }
+    ]
+   },
+   "expected": {
+    "E6": 2.42333333333333,
+    "E7": 6.92380952380952,
+    "E8": 4.50047619047619,
+    "E9": 0.65,
+    "E10": 45.0047619047619,
+    "E11": 6.92380952380952,
+    "E12": 21.2333333333333,
+    "E13": 24.2333333333333,
+    "statusCode": "ok",
+    "rowText": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "rowCost": [
+     12,
+     3.33333333333333,
+     2.5,
+     1,
+     1.2,
+     1.2
+    ]
+   }
+  }
+ ]
+}

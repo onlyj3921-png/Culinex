@@ -1,0 +1,93 @@
+# CULINEX - Codemagic cloud build (Android APK).
+# NOTE: this workflow has been written but NEVER executed. The first run is the first real compile of the project.
+# Workflows:
+#   culinex-android   : strict. Stops at the first failing step. Produces the release APK only if everything passes.
+#   culinex-diagnose  : triage. Runs every step even if analyze/tests fail and uploads logs, so one run shows ALL problems.
+definitions:
+  scripts:
+    - &preflight
+      name: Pre-flight checks (Python tools; no Flutter needed)
+      script: |
+        set -e
+        python3 tools/verify_engine_spec.py packages/culinex_engine/test/golden/calc_vectors.json
+        python3 tools/test_sql.py
+        python3 tools/check_strings.py
+        python3 tools/check_dart.py
+        python3 tools/check_calls.py
+    - &android_setup
+      name: Generate Android project and apply safe configuration
+      script: bash tools/ci_android_setup.sh
+    - &flutter_version
+      name: Tool versions
+      script: |
+        flutter --version
+        dart --version
+        java -version
+
+workflows:
+  culinex-android:
+    name: CULINEX Android APK (strict)
+    instance_type: linux_x2
+    max_build_duration: 45
+    environment:
+      flutter: stable
+      java: 17
+    scripts:
+      - *flutter_version
+      - *preflight
+      - *android_setup
+      - name: Install dependencies (app)
+        script: flutter pub get
+      - name: Install dependencies and run Dart tests (engine package, 42 golden vectors)
+        script: |
+          cd packages/culinex_engine
+          dart pub get
+          dart test
+      - name: Flutter analyze (errors fail the build; lint infos and warnings do not)
+        script: flutter analyze --no-fatal-infos --no-fatal-warnings
+      - name: Flutter tests
+        script: flutter test
+      - name: Build release APK
+        script: flutter build apk --release
+    artifacts:
+      - build/app/outputs/flutter-apk/*.apk
+
+  culinex-diagnose:
+    name: CULINEX diagnose (run everything, keep going)
+    instance_type: linux_x2
+    max_build_duration: 45
+    environment:
+      flutter: stable
+      java: 17
+    scripts:
+      - *flutter_version
+      - name: Pre-flight checks
+        script: |
+          python3 tools/verify_engine_spec.py packages/culinex_engine/test/golden/calc_vectors.json
+          python3 tools/test_sql.py
+          python3 tools/check_strings.py
+          python3 tools/check_dart.py
+          python3 tools/check_calls.py
+        ignore_failure: true
+      - *android_setup
+      - name: flutter pub get
+        script: flutter pub get 2>&1 | tee pub_get.log
+        ignore_failure: true
+      - name: Dart tests (engine)
+        script: |
+          cd packages/culinex_engine
+          dart pub get
+          dart test 2>&1 | tee ../../dart_test.log
+        ignore_failure: true
+      - name: Flutter analyze (full output)
+        script: flutter analyze 2>&1 | tee analyze.log
+        ignore_failure: true
+      - name: Flutter tests
+        script: flutter test 2>&1 | tee flutter_test.log
+        ignore_failure: true
+      - name: Build release APK (attempt)
+        script: flutter build apk --release 2>&1 | tee build.log
+        ignore_failure: true
+    artifacts:
+      - build/app/outputs/flutter-apk/*.apk
+      - "*.log"

@@ -1,0 +1,13 @@
+# Google Play preparation checklist (nothing here has been submitted; not published)
+- [ ] Google Play Developer account (check current registration fee/verification rules)
+- [ ] Confirm package name (placeholder `com.culinex.culinex`) — cannot be changed after publishing
+- [ ] Generate android/ (`flutter create`), set app label "CULINEX", min/target SDK per current Play requirements
+- [ ] Launcher icon + adaptive icon, 512×512 store icon, feature graphic 1024×500, phone screenshots (real device)
+- [ ] Create upload keystore; configure release signing; build `flutter build appbundle`; enrol in Play App Signing
+- [ ] Privacy policy URL (data stays on device; backups are user-shared files); Data safety form
+- [ ] Content rating questionnaire; target audience; ads declaration (none)
+- [ ] Store listing text EN + BM; tagline "Know Your Cost. Control Your Business."
+- [ ] Closed testing with real users (Play may require a testing period for new personal accounts — check current policy)
+- [ ] Real-device test matrix (Android versions/screen sizes); fix issues from `flutter analyze` and runtime
+- [ ] Before adding Premium: Play Billing/in-app subscriptions, server-side receipt verification, pricing decided by owner
+- [ ] Lawyer review of disclaimer/terms; native Bahasa Melayu review

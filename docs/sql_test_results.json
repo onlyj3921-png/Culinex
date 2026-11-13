@@ -1,0 +1,214 @@
+[
+ {
+  "name": "schema loads and version meta present",
+  "pass_": true
+ },
+ {
+  "name": "reject pack_size 0",
+  "pass_": true
+ },
+ {
+  "name": "reject negative price",
+  "pass_": true
+ },
+ {
+  "name": "reject blank name",
+  "pass_": true
+ },
+ {
+  "name": "reject unit 'oz'",
+  "pass_": true
+ },
+ {
+  "name": "reject family/unit disagreement (kg as volume)",
+  "pass_": true
+ },
+ {
+  "name": "price history row written on insert",
+  "pass_": true
+ },
+ {
+  "name": "reject margin 1.0",
+  "pass_": true
+ },
+ {
+  "name": "reject margin -0.1",
+  "pass_": true
+ },
+ {
+  "name": "accept margin 0",
+  "pass_": true
+ },
+ {
+  "name": "reject servings 0",
+  "pass_": true
+ },
+ {
+  "name": "reject own price 0",
+  "pass_": true
+ },
+ {
+  "name": "recipe item rejects unit family mismatch (ml on a g ingredient)",
+  "pass_": true
+ },
+ {
+  "name": "recipe item rejects negative qty",
+  "pass_": true
+ },
+ {
+  "name": "recipe item accepts kg on a g ingredient (same family)",
+  "pass_": true
+ },
+ {
+  "name": "ingredient family change blocked while used by recipes",
+  "pass_": true
+ },
+ {
+  "name": "expense rejects amount 0",
+  "pass_": true
+ },
+ {
+  "name": "expense rejects unknown category",
+  "pass_": true
+ },
+ {
+  "name": "expense rejects malformed date",
+  "pass_": true
+ },
+ {
+  "name": "sale rejects quantity 0",
+  "pass_": true
+ },
+ {
+  "name": "foreign key enforced (recipe_id 999)",
+  "pass_": true
+ },
+ {
+  "name": "v_recipe_cost ingredient cost = RM21.2333 (V1.2 sample)",
+  "pass_": true
+ },
+ {
+  "name": "cost per serving = RM2.4233 (V1.2 sample)",
+  "pass_": true
+ },
+ {
+  "name": "price update adds a history row",
+  "pass_": true
+ },
+ {
+  "name": "non-price update adds no history row",
+  "pass_": true
+ },
+ {
+  "name": "affected_recipes lists the burger",
+  "pass_": true
+ },
+ {
+  "name": "recipe cost recalculates automatically after price change (+RM12.00)",
+  "pass_": true
+ },
+ {
+  "name": "historical sale cost snapshot unchanged by price change",
+  "pass_": true
+ },
+ {
+  "name": "stock_in applied to balance",
+  "pass_": true
+ },
+ {
+  "name": "stock_in rejects negative qty",
+  "pass_": true
+ },
+ {
+  "name": "stock_out rejects positive qty",
+  "pass_": true
+ },
+ {
+  "name": "sale auto-deducts chicken: 1500g/10 servings x 4 = 600g",
+  "pass_": true
+ },
+ {
+  "name": "sale auto-deducts buns: 10/10 x 4 = 4 pcs",
+  "pass_": true
+ },
+ {
+  "name": "untracked ingredient gets no movement",
+  "pass_": true
+ },
+ {
+  "name": "low_stock lists chicken (2400g <= 2500g) but not buns (20 pcs > 5)",
+  "pass_": true
+ },
+ {
+  "name": "inventory value = 2400g chicken + 20 buns",
+  "pass_": true
+ },
+ {
+  "name": "stock_usage report: chicken 600g, buns 4",
+  "pass_": true
+ },
+ {
+  "name": "voiding a sale restores stock (chicken 3000g again)",
+  "pass_": true
+ },
+ {
+  "name": "stock_usage nets out voided sale",
+  "pass_": true
+ },
+ {
+  "name": "kg quantity deducts in base units (recipe 2 kg per 4 servings, sell 2)",
+  "pass_": true
+ },
+ {
+  "name": "kg recipe unit converts to g in stock deduction (1000g)",
+  "pass_": true
+ },
+ {
+  "name": "period_totals revenue/cogs/costed revenue/expenses match independent sums",
+  "pass_": true
+ },
+ {
+  "name": "sales_by_bucket daily: 43 buckets match independent grouping",
+  "pass_": true
+ },
+ {
+  "name": "expenses_by_bucket daily match",
+  "pass_": true
+ },
+ {
+  "name": "sales_by_bucket weekly: 7 buckets match independent grouping",
+  "pass_": true
+ },
+ {
+  "name": "expenses_by_bucket weekly match",
+  "pass_": true
+ },
+ {
+  "name": "sales_by_bucket monthly: 2 buckets match independent grouping",
+  "pass_": true
+ },
+ {
+  "name": "expenses_by_bucket monthly match",
+  "pass_": true
+ },
+ {
+  "name": "expenses_by_category totals sum to period expenses",
+  "pass_": true
+ },
+ {
+  "name": "inclusive date boundaries (sale on first and last day counted)",
+  "pass_": true
+ },
+ {
+  "name": "BETWEEN is inclusive of both ends and excludes outside days",
+  "pass_": true
+ },
+ {
+  "name": "recipe_list excludes soft-deleted and searches by name",
+  "pass_": true
+ },
+ {
+  "name": "backup copy passes integrity_check and keeps data",
+  "pass_": true
+ }
+]
