@@ -69,10 +69,13 @@ for f in files:
     for sym,src in lib_syms.items():
         if src==f or sym not in idents: continue
         if os.path.normpath(src) not in imports and not sym.startswith("_"): errs.append(f"{f}: uses '{sym}' declared in {src} but does not import it")
-    if any(sym in idents for sym in engine_syms if len(sym)>3 and sym[0].isupper() and sym not in ("Brand",)) and "package:culinex_engine/culinex_engine.dart" not in raw:
-        used=[sym for sym in engine_syms if sym in idents and sym[0].isupper()]
-        errs.append(f"{f}: uses engine symbols {used[:3]} without importing culinex_engine")
+    used=[sym for sym in engine_syms if len(sym)>3 and not sym.startswith("_") and re.search(r"(?<![\w.])"+re.escape(sym)+r"\b",s) and sym not in ("Brand",)]  # not preceded by "." (e.g. Icons.calculate)
+    if used and "package:culinex_engine/culinex_engine.dart" not in raw:
+        errs.append(f"{f}: uses engine symbols {used[:4]} without importing culinex_engine")
+    for sym in ("SystemNavigator","Clipboard","HapticFeedback","SystemChrome"):
+        if sym in idents and "package:flutter/services.dart" not in raw: errs.append(f"{f}: uses {sym} without importing flutter/services.dart")
     if re.search(r"\b(Text|Scaffold|Column|Row|Icon)\(",s) and "package:flutter/material.dart" not in raw: errs.append(f"{f}: uses Flutter widgets without material import")
+    if "../core/strings.dart" in raw and not re.search(r"\bT\b",s): errs.append(f"{f}: strings.dart import is unused")
 # Repo methods used from UI exist
 repo=texts["lib/data/repository.dart"]; methods=set(re.findall(r"^\s+(?:Future<[^\n]*?>|Future<void>|[A-Za-z<>?,\{\}\(\)\s]+?)\s+([a-z]\w*)\(",repo,re.M))|set(re.findall(r"^\s+Future<[^\n]*?>\s+([a-z]\w*)\(",repo,re.M))
 for f in files:

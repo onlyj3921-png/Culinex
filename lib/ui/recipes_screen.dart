@@ -208,14 +208,14 @@ class _RecipeEditorState extends ConsumerState<RecipeEditorScreen> {
                 if (v == 'dup') {
                   final nid = await repo.duplicateRecipe(_id!, t('copy_suffix'));
                   bump(ref);
-                  if (mounted && nid != null) {
+                  if (context.mounted && nid != null) {
                     showMsg(context, t('duplicated'));
                     context.pushReplacement('/recipe/$nid');
                   }
                 } else if (v == 'del' && await confirmDialog(context, ref, t('confirm_delete'))) {
                   await repo.deleteRecipe(_id!);
                   bump(ref);
-                  if (mounted) context.pop();
+                  if (context.mounted) context.pop();
                 }
               },
               itemBuilder: (c) => [

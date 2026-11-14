@@ -176,12 +176,12 @@ class _IngredientEditorState extends ConsumerState<IngredientEditorScreen> {
               onPressed: () async {
                 final repo = ref.read(repoProvider);
                 final used = await repo.ingredientUsedInRecipes(_id!);
-                if (!mounted) return;
+                if (!context.mounted) return;
                 if (used) return showMsg(context, t('err_in_use'));
                 if (await confirmDialog(context, ref, t('confirm_delete'))) {
                   await repo.deleteIngredient(_id!);
                   bump(ref);
-                  if (mounted) context.pop();
+                  if (context.mounted) context.pop();
                 }
               },
             ),

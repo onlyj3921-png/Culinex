@@ -23,7 +23,7 @@ class DashboardScreen extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('CULINEX')),
       body: ListView(padding: const EdgeInsets.all(14), children: [
-        Text(Brand.tagline, style: const TextStyle(color: Brand.grey, fontStyle: FontStyle.italic)),
+        const Text(Brand.tagline, style: TextStyle(color: Brand.grey, fontStyle: FontStyle.italic)),
         const SizedBox(height: 12),
         SegmentedButton<PeriodKind>(
           segments: [
