@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../core/money.dart';
+import '../core/simple_cost.dart';
 import '../core/strings.dart';
 import '../core/theme.dart';
 import '../state/providers.dart';
@@ -341,12 +342,33 @@ class _CalculatorScreenState extends ConsumerState<CalculatorScreen> with Single
         ]),
       );
 
+  Widget _simpleCostBanner(T t, SimpleCostState state) {
+    final invalid = state == SimpleCostState.invalid;
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: invalid ? const Color(0xFFFDE7E4) : const Color(0xFFEDEBE5),
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Text(
+        invalid ? t('simple_cost_invalid') : t('simple_enter_cost'),
+        style: TextStyle(fontWeight: FontWeight.w700, color: invalid ? Brand.danger : Brand.black),
+      ),
+    );
+  }
+
   Widget _resultsCard(T t) {
     final simple = _tabs.index == 0;
+    // Simple mode feeds the engine one hidden row built from the cost field. While that field is empty or not a
+    // number, show a prompt and "—" instead of the engine's "incomplete row" state (no visible row exists to fix).
+    final costState = simple ? classifySimpleCost(_simpleIng.text) : SimpleCostState.valid;
+    final costBlocked = costState != SimpleCostState.valid;
     final r = calculate(_input(simple));
-    String show(Object? v, [String Function(double)? f]) => v is double ? (f ?? rm)(v) : (v is String ? t(_gateKey(v)) : '—');
+    String show(Object? v, [String Function(double)? f]) =>
+        costBlocked ? '—' : (v is double ? (f ?? rm)(v) : (v is String ? t(_gateKey(v)) : '—'));
     return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-      StatusBanner(r.status),
+      costBlocked ? _simpleCostBanner(t, costState) : StatusBanner(r.status),
       const SizedBox(height: 10),
       AppCard(
         child: Column(children: [

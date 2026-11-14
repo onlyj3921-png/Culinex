@@ -157,3 +157,11 @@ Confirmed defects found by reading the code, and fixed:
  7. sales_screen.dart, expenses_screen.dart, ingredients_screen.dart: on Android 15+ (edge-to-edge) the bottom sheet buttons / last editor button could sit under the system navigation bar. Added SafeArea / bottom padding.
 Executed here: the exact backup/restore SQL (VACUUM INTO with an apostrophe in the path, 7-table check, version read, triggers preserved: 8) against the real schema in SQLite 3.45: passed. Engine vectors, 53 SQL tests, string check, static checks: re-run, all passed.
 STILL UNVERIFIED: Dart compilation/analysis, all Dart/Flutter tests, dependency resolution, VACUUM INTO and file operations on a real Android device (older Android SQLite may lack VACUUM INTO: fallback exists but is untested), every runtime behaviour.
+
+SIMPLE-CALCULATOR FIX ADDENDUM (real-device QA finding from V7; Dart/Flutter still unavailable here, nothing compiled or run on a device)
+------------------------------------------------------------
+Bug: Simple tab at launch showed "CHECK: an ingredient row is incomplete" and "Fix inputs" with no visible row.
+Root cause: Simple mode feeds the engine one hidden row built from the cost field; an empty/non-numeric field gives that row no price, which the engine correctly calls incomplete.
+Fix (UI only): lib/core/simple_cost.dart (classifySimpleCost), guard in _resultsCard (empty -> neutral prompt, invalid -> red prompt, both with "—" in all 8 results), 2 new EN/MS strings. Engine, Advanced tab, database and formulas unchanged.
+Tests run here: tools/test_simple_cost.py (41 checks: classifier cases, screen model incl. valid path vs V1.2 golden t1, strings, source assertions): 41/41. Against the pre-fix source the suite fails 7 checks (detects the bug).
+Written but NOT run: test/simple_cost_test.dart (needs flutter test). No widget test was added.

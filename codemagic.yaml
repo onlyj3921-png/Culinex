@@ -15,6 +15,7 @@ definitions:
         python3 tools/check_dart.py
         python3 tools/check_calls.py
         python3 tools/test_ci_android_setup.py
+        python3 tools/test_simple_cost.py
     - &android_setup
       name: Generate Android project and apply safe configuration
       script: bash tools/ci_android_setup.sh
@@ -70,6 +71,7 @@ workflows:
           python3 tools/check_dart.py
           python3 tools/check_calls.py
           python3 tools/test_ci_android_setup.py
+          python3 tools/test_simple_cost.py
         ignore_failure: true
       - *android_setup
       - name: flutter pub get
