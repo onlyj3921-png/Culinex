@@ -1,0 +1,77 @@
+
+name: CULINEX Android APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  build-android:
+    name: Build CULINEX APK
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Setup Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Check versions
+        run: |
+          flutter --version
+          dart --version
+          java -version
+
+      - name: Run CULINEX checks
+        run: |
+          python3 tools/verify_engine_spec.py packages/culinex_engine/test/golden/calc_vectors.json
+          python3 tools/test_sql.py
+          python3 tools/check_strings.py
+          python3 tools/check_dart.py
+          python3 tools/check_calls.py
+
+      - name: Setup Android project
+        run: bash tools/ci_android_setup.sh
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Test CULINEX engine
+        working-directory: packages/culinex_engine
+        run: |
+          dart pub get
+          dart test
+
+      - name: Flutter analyze
+        run: flutter analyze --no-fatal-infos --no-fatal-warnings
+
+      - name: Flutter tests
+        run: flutter test
+
+      - name: Build APK
+        run: flutter build apk --release
+
+      - name: Upload APK
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: CULINEX-Android-APK
+          path: build/app/outputs/flutter-apk/*.apk
+          if-no-files-found: error
+          retention-days: 14
