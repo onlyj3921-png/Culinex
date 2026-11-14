@@ -1,0 +1,31 @@
+// CULINEX: make every Android module (the app and all Flutter plugins) compile against at least this SDK.
+// Why: some plugins pin an older compileSdk (file_picker -> android-34) while others
+// (flutter_plugin_android_lifecycle) require compileSdk 36+, which fails the AAR metadata check.
+// This only RAISES compileSdk. minSdk and targetSdk are not touched.
+// Applied from the root android build file (Groovy or Kotlin DSL) by tools/ci_android_setup.sh.
+def culinexCompileSdk = 36
+
+subprojects { sub ->
+    def raiseCompileSdk = { p ->
+        def androidExt = p.extensions.findByName('android')
+        if (androidExt == null) return
+        def current = null
+        try { current = androidExt.compileSdk } catch (Throwable ignored) { current = null }
+        if (current == null || current < culinexCompileSdk) {
+            try {
+                try { androidExt.compileSdk = culinexCompileSdk }
+                catch (Throwable ignored) { androidExt.compileSdkVersion(culinexCompileSdk) }
+                p.logger.lifecycle("CULINEX: ${p.path} compileSdk ${current} -> ${culinexCompileSdk}")
+            } catch (Throwable e) {
+                // e.g. the module was already finalized by AGP; report instead of failing here
+                p.logger.warn("CULINEX: could not raise compileSdk of ${p.path} (${current}): ${e.message}")
+            }
+        }
+    }
+    // register before the module is evaluated; if it is already evaluated (e.g. :app), apply now
+    if (sub.state.executed) {
+        raiseCompileSdk(sub)
+    } else {
+        sub.afterEvaluate { p -> raiseCompileSdk(p) }
+    }
+}
